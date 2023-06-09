@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Hamster Run Kellar Patrick</string>
+    <string name="moves">"Moves:  "</string>
+    <string name="homeStores">"Home Stores:  "</string>
+    <string name="food">"Food in pouches:  "</string>
+    <string name="energy">"Energy:  "</string>
+    <string name="zoom">"Zoom Power:  "</string>
+    <string name="reset">RESET</string>
+    <string name="eat">EAT</string>
+    <string name="zoomBtn">ZOOM</string>
+    <string name="up">U</string>
+    <string name="left">L</string>
+    <string name="right">R</string>
+    <string name="down">D</string>
+    <string name="floatingAction">SelectFAB</string>
+    <string name="hamsterFABBlack">hamsterFABBlack</string>
+    <string name="hamsterFABBlue">hamsterFABBlue</string>
+    <string name="hamsterFABRed">hamsterFABRed</string>
+    <string name="hamsterFABWhite">hamsterFABWhite</string>
+    <string name="pileText">Food left in piles:</string>
+
+</resources>

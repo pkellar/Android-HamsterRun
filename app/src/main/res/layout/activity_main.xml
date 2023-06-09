@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/foodText"
+        app:layout_constraintStart_toEndOf="@+id/foodText"
+        app:layout_constraintTop_toTopOf="@+id/foodText" />
+
+    <TextView
+        android:id="@+id/zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/zoomText"
+        app:layout_constraintStart_toEndOf="@+id/zoomText"
+        app:layout_constraintTop_toTopOf="@+id/zoomText" />
+
+    <TextView
+        android:id="@+id/energy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/energyText"
+        app:layout_constraintStart_toEndOf="@+id/energyText"
+        app:layout_constraintTop_toTopOf="@+id/energyText" />
+
+    <TextView
+        android:id="@+id/moves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/moveText"
+        app:layout_constraintStart_toEndOf="@+id/moveText"
+        app:layout_constraintTop_toTopOf="@+id/moveText" />
+
+    <TextView
+        android:id="@+id/stores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/homeText"
+        app:layout_constraintStart_toEndOf="@+id/homeText"
+        app:layout_constraintTop_toTopOf="@+id/homeText" />
+
+    <TextView
+        android:id="@+id/moveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moves"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homeStores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moveText" />
+
+    <TextView
+        android:id="@+id/foodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeText" />
+
+    <TextView
+        android:id="@+id/energyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/energy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foodText" />
+
+    <TextView
+        android:id="@+id/zoomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zoom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/energyText" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:onClick="resetClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/eatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eat"
+        android:onClick="eatClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/zoomBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zoomBtn"
+        android:onClick="zoomClick"
+        app:layout_constraintBottom_toTopOf="@+id/eatBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/downBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/down"
+        android:onClick="moveClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rightBtn" />
+
+    <Button
+        android:id="@+id/rightBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/right"
+        android:onClick="moveClick"
+        app:layout_constraintBottom_toTopOf="@+id/downBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upBtn" />
+
+    <Button
+        android:id="@+id/leftbtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/left"
+        android:onClick="moveClick"
+        app:layout_constraintBottom_toTopOf="@+id/downBtn"
+        app:layout_constraintEnd_toStartOf="@+id/downBtn" />
+
+    <Button
+        android:id="@+id/upBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/up"
+        android:onClick="moveClick"
+        app:layout_constraintBottom_toTopOf="@+id/leftbtn"
+        app:layout_constraintEnd_toStartOf="@+id/rightBtn"
+        app:layout_constraintStart_toEndOf="@+id/leftbtn" />
+
+    <edu.sdsmt.hamsterrunkellarpatrick.View.GameView
+        android:id="@+id/gameView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hamsterFABBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zoomText" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hamsterFABBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/hamsterFABBlack"
+        android:alpha="0"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onBlack"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+        app:srcCompat="@drawable/hamster"
+        app:tint="@color/black" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hamsterFABBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:clickable="true"
+        android:contentDescription="@string/hamsterFABBlue"
+        android:focusable="true"
+        android:onClick="onBlue"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="@+id/hamsterFABBlack"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+        app:srcCompat="@drawable/hamster"
+        app:tint="@color/Blue" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hamsterFABRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:clickable="true"
+        android:contentDescription="@string/hamsterFABRed"
+        android:focusable="true"
+        android:onClick="onRed"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="@+id/hamsterFABBlack"
+        app:layout_constraintTop_toTopOf="@+id/hamsterFABBlack"
+        app:srcCompat="@drawable/hamster"
+        app:tint="@color/Red" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hamsterFABWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:clickable="true"
+        android:contentDescription="@string/hamsterFABWhite"
+        android:focusable="true"
+        android:onClick="onYellow"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="@+id/hamsterFABBlack"
+        app:layout_constraintTop_toTopOf="@+id/hamsterFABBlack"
+        app:srcCompat="@drawable/hamster"
+        app:tint="@color/Yellow" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/floatingAction"
+        android:focusable="true"
+        android:onClick="onBurst"
+        app:layout_constraintBottom_toTopOf="@+id/zoomBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <TextView
+        android:id="@+id/pileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pileText"
+        app:layout_constraintStart_toEndOf="@+id/zoomBtn"
+        app:layout_constraintTop_toBottomOf="@+id/gameView" />
+
+    <TextView
+        android:id="@+id/pileInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/pileText"
+        app:layout_constraintTop_toBottomOf="@+id/pileText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
